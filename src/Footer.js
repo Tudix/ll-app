@@ -31,7 +31,6 @@ function Footer(){
                     <li><a href="/X">X</a></li>
                 </ul>
             </div>
-            
         </footer>
     )
 }

@@ -40,10 +40,15 @@
 
 nav {
   display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer {
   display: inline-flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .nav_items_inline {
@@ -69,29 +74,20 @@ footer {
   justify-content: flex-start;
   gap: 10px;
   list-style-type: none;
+  padding-left: 0;
 }
 
 h1 {
-  font-size: 64pt;
-  font-weight: medium;
-}
-
-h2 {
   font-size: 40pt;
   font-weight: normal;
 }
 
-h3 {
-  font-size: 20pt;
-  font-weight: 800;
-}
-
-h4 {
+h2 {
   font-size: 18pt;
   font-weight: bold;
 }
 
-h5 {
+h3 {
   font-size: 18pt;
   font-weight: medium;
 }
