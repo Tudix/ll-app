@@ -37,18 +37,46 @@
   }
 }
 
-
 nav {
-  display: inline-flex;
-  width: 100%;
+  display: flex;
+  width: 80%;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2vh;
 }
 
 footer {
-  display: inline-flex;
-  width: 100%;
+  position: relative;
+  width: 100vw;               /* Ensure it covers the full viewport width */
+  left: 50%;                  /* Move the div to the center of the parent */
+  right: 50%;                 /* Stretch the width to the right */
+  margin-left: -50vw;         /* Offset to the left by 50% of viewport width */
+  margin-right: -50vw;        /* Offset to the right by 50% of viewport width */
+  background-color: #D9D9D9;  /* Background color */
+  padding: 20px 0;            /* Optional: padding inside the full-width div */
+  box-sizing: border-box;
+}
+
+#bg-call-to-action{
+  position: relative;
+  width: 100vw;               /* Ensure it covers the full viewport width */
+  left: 50%;                  /* Move the div to the center of the parent */
+  right: 50%;                 /* Stretch the width to the right */
+  margin-left: -50vw;         /* Offset to the left by 50% of viewport width */
+  margin-right: -50vw;        /* Offset to the right by 50% of viewport width */
+  background-color: #6E6F6E;  /* Background color */
+  padding: 20px 0;            /* Optional: padding inside the full-width div */
+  box-sizing: border-box;
+}
+
+.footer-content {
+  display: flex;
+  width: 80%;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;             /* Center the content */
+  padding: 30px;
 }
 
 .nav_items_inline {
@@ -58,18 +86,8 @@ footer {
   list-style-type: none;
 }
 
-.nav_items_inline li a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav_items_column li a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .nav_items_column {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
@@ -77,14 +95,40 @@ footer {
   padding-left: 0;
 }
 
+.items_inline {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.items_column {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+
+.nav-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0;
+}
+
 h1 {
   font-size: 40pt;
   font-weight: normal;
+  font-family: 'Markazi';
 }
 
 h2 {
   font-size: 18pt;
   font-weight: bold;
+  font-family: 'Markazi';
 }
 
 h3 {
@@ -92,10 +136,12 @@ h3 {
   font-weight: medium;
 }
 
+
 p {
   font-size: 16pt;
   font-weight: normal;
   line-height: 1.5;
+  font-family: 'Karla';
 }
 
 span {
@@ -103,6 +149,126 @@ span {
   font-weight: medium;
 }
 
-img {
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.columns-2 {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.centered {
+  text-align: center;
   align-self: center;
+}
+
+#centered {
+  text-align: center;
+  align-self: center;
+}
+
+#bg-call-to-action{
+  position: relative;
+  width: 100vw;               /* Ensure it covers the full viewport width */
+  left: 50%;                  /* Move the div to the center of the parent */
+  right: 50%;                 /* Stretch the width to the right */
+  margin-left: -50vw;         /* Offset to the left by 50% of viewport width */
+  margin-right: -50vw;        /* Offset to the right by 50% of viewport width */
+  background-color: #6E6F6E;  /* Background color */
+  padding: 20px 0;            /* Optional: padding inside the full-width div */
+  box-sizing: border-box;
+}
+
+.content-container {
+  width: 80vw;                /* Constrain content to 80% of viewport width */
+  margin: 0 auto;             /* Center the content */
+  display: flex;
+  justify-content: space-between;  /* Space out the columns */
+  flex-wrap: wrap;            /* Ensure responsiveness on smaller screens */
+}
+
+.bg-rating-container {
+  background-color: #D9D9D9;
+  position: relative;
+  width: 100vw;               /* Ensure it covers the full viewport width */
+  left: 50%;                  /* Move the div to the center of the parent */
+  right: 50%;                 /* Stretch the width to the right */
+  margin-left: -50vw;         /* Offset to the left by 50% of viewport width */
+  margin-right: -50vw;        /* Offset to the right by 50% of viewport width */
+  padding: 20px 0;            /* Optional: padding inside the full-width div */
+  box-sizing: border-box;
+}
+
+.card-container {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80vw;                /* Constrain content to 80% of viewport width */
+  margin: 0 auto;             /* Center the content */
+}
+
+.card {
+  background-color: #ffffff;
+  display:flex;
+  flex-direction: column;
+  margin: 2vh 0;
+  padding: 0 30px;
+}
+
+.image-container {
+  position: relative;
+  width: 48%;        /* Adjust width according to your layout */
+  height: 300px;      /* Set height to ensure enough space for overlapping */
+  /*background-color: #f0f0f0; /* Optional: background color for visibility */
+  overflow: hidden;   /* Hide overflow if images extend beyond container */
+}
+
+/* Common styles for diagonal positioning */
+.image-diagonal {
+  position: absolute;
+  width: 40%;         /* Adjust size as needed */
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+/* First image: positioned bottom-left, slightly rotated */
+.image-1 {
+  bottom: 20%;        /* Positioning towards the center */
+  left: 15%;          /* Positioning towards the center */
+  transform: rotate(-10deg); /* Slight rotation for aesthetics */
+  opacity: 0.9;       /* Slight transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow */
+  z-index: 1; /* Explicitly lower stacking order */
+}
+
+/* Second image: positioned top-right, slightly rotated */
+.image-2 {
+  top: 20%;           /* Positioning towards the center */
+  right: 10%;         /* Positioning towards the center */
+  transform: rotate(10deg); /* Opposite rotation */
+  opacity: 0.9;       /* Slight transparency */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow */
+  z-index: 2; /* Explicitly higher stacking order */
+}
+
+.image-diagonal:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  opacity: 1;            /* Fully opaque on hover */
+}
+
+.neon {
+  transition: 0.85s;
+}
+
+.neon:hover {
+  box-shadow: inset 0px 0px 30px 5px gold,0px 0px 30px 5px gold;
+  transition: 1s;
 }
