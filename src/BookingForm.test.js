@@ -23,24 +23,27 @@ test('updateTimes returns the same times that are passed in', () => {
 });
 
 
-/*
+// Mock functions for handling state updates
+
+const mockSetResDate = jest.fn();
+const mockSetResTime = jest.fn();
+const mockSetNrGuests = jest.fn();
+const mockSetOccasion = jest.fn();
+const mockDispatch = jest.fn();
+
 test('allow the user to submit the form', () => {
-
-    // Mock functions for handling state updates
-
-    const mockSetResDate = jest.fn();
-    const mockSetResTime = jest.fn();
-    const mockSetNrGuests = jest.fn();
-    const mockSetOccasion = jest.fn();
 
     render(<BookingForm
         availableTimes={["16:00", "17:00", "18:00"]}
         resDate=""
         setResDate={mockSetResDate}
-        resTime={mockSetResTime}
-        nrGuests={mockSetNrGuests}
+        resTime=""
+        setResTime={mockSetResTime}
+        nrGuests={1}
+        setNrGuests={mockSetNrGuests}
         occasion=""
         setOccasion={mockSetOccasion}
+        dispatch={mockDispatch}
     />)
 
     // Fill out the form fields
@@ -55,4 +58,4 @@ test('allow the user to submit the form', () => {
     expect(mockSetResTime).toHaveBeenCalledWith('18:00');
     expect(mockSetNrGuests).toHaveBeenCalledWith('4');
     expect(mockSetOccasion).toHaveBeenCalledWith('Birthday');
-});*/
+});
