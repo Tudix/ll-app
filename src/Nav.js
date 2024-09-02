@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Nav(){
     return(
         <nav>
-          <Link to="/" ><img src={require("./icons_assets/logo_header.png")} alt="logo_LittleLemon" height={50}/></Link>
+          <Link to="/" ><img src={require("./icons_assets/logo_header.png")} alt="logo_LittleLemon" className="logo-nav" height={50}/></Link>
             <ul class="nav_items_inline">
                 <li><Link to="/" className="nav-item">Home</Link></li>
                 <li><Link to="/about" className="nav-item">About</Link></li>

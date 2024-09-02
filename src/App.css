@@ -46,6 +46,10 @@ nav {
   padding: 2vh;
 }
 
+.logo-nav{
+  margin: 0 30px;
+}
+
 footer {
   position: relative;
   width: 100vw;               /* Ensure it covers the full viewport width */
@@ -84,6 +88,7 @@ footer {
   justify-content: space-evenly;
   gap: 20px;
   list-style-type: none;
+  padding-left: 0;
 }
 
 .nav_items_column {
@@ -266,9 +271,15 @@ span {
 
 .neon {
   transition: 0.85s;
+  margin: 0 20px;
 }
 
 .neon:hover {
   box-shadow: inset 0px 0px 30px 5px gold,0px 0px 30px 5px gold;
   transition: 1s;
+}
+
+.form-booking {
+  width: 80vw;
+  margin: 30px auto;             /* Center the content */
 }
