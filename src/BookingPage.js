@@ -4,9 +4,9 @@ import { useState } from "react";
 function BookingPage({ availableTimes, dispatch, submitForm }) {
 
   const [resDate, setResDate] = useState("");
-  const [resTime, setResTime] = useState(availableTimes[0]);
-  const [nrGuests, setNrGuests] = useState(1);
-  const [occasion, setOccasion] = useState("occasion");
+  const [resTime, setResTime] = useState("");
+  const [nrGuests, setNrGuests] = useState("");
+  const [occasion, setOccasion] = useState("");
 
   return (
     <>
