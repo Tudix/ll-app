@@ -5,12 +5,13 @@ import Main from "./Main";
 import Footer from "./Footer";
 
 function App() {
+
   return (
     <>
-        <Header/>
-        <Nav/>
-        <Main/>
-        <Footer/>
+      <Header />
+      <Nav />
+      <Main />
+      <Footer />
     </>
   );
 }

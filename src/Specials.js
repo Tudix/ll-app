@@ -1,9 +1,9 @@
 function Specials() {
-    return (
-      <>
-          Specials
-      </>
-    );
-  }
+  return (
+    <>
+      Specials
+    </>
+  );
+}
 
-  export default Specials;
+export default Specials;
