@@ -49,7 +49,14 @@ function BookingForm({
 
   return (
     <>
-      <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} className="form-booking" onSubmit={handleSubmit} noValidate>
+      <form
+        style={{ display: 'grid', maxWidth: '200px', gap: '20px' }}
+        className="form-booking"
+        onSubmit={handleSubmit}
+        noValidate
+        aria-labelledby="booking-form-header">
+
+        <h2 id="booking-form-header">Reservation form</h2>
         <label htmlFor="res-date" >Choose date</label>
         <input type="date" id="res-date" name="res-date"
           value={resDate}
@@ -90,16 +97,17 @@ function BookingForm({
           <option>Anniversary</option>
         </select>
 
-        <input type="submit"
-          value="Make Your reservation"
+        <input className="button" type="submit"
+          value="Book now"
+          aria-label="Submit the reservation form"
           disabled={!formValid}
         />
       </form>
 
-      Check resDate: {resDate} <br />
+      {/*Check resDate: {resDate} <br />
       Check resTime: {resTime} <br />
       Check guests: {nrGuests} <br />
-      Check occasion: {occasion} <br />
+      Check occasion: {occasion} <br />*/}
     </>
   );
 }
